@@ -1,0 +1,26 @@
+# External third-party repositories
+external/calvin/
+external/openvla-oft/
+
+# Datasets, outputs, checkpoints
+data_cache/
+checkpoints/
+logs/
+outputs/
+external/calvin/dataset/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+calvin_env/
+
+# Large ML files
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz

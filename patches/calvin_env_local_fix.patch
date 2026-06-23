@@ -1,0 +1,56 @@
+diff --git a/calvin_env/envs/play_table_env.py b/calvin_env/envs/play_table_env.py
+index ea7c348..9236f9e 100644
+--- a/calvin_env/envs/play_table_env.py
++++ b/calvin_env/envs/play_table_env.py
+@@ -72,7 +72,36 @@ class PlayTableSimEnv(gym.Env):
+             )
+             for name in cameras
+         ]
+-        log.info(f"Using calvin_env with commit {get_git_commit_hash(Path(calvin_env.__file__))}.")
++        try:
++            calvin_path = Path(calvin_env.__file__) if calvin_env.__file__ else Path(calvin_env.__path__[0])
++            log.info(f"Using calvin_env with commit {get_git_commit_hash(calvin_path)}.")
++        except Exception as e:
++            log.warning(f"Could not determine calvin_env git commit: {e}")
++
++        # Define action and observation spaces
++        # Action: [3 relative position, 3 relative orientation (Euler), 1 gripper action] = 7D
++        self.action_space = gym.spaces.Box(low=-1.0, high=1.0, shape=(7,), dtype=np.float32)
++        
++        # Observation space is a dictionary containing RGB, depth, robot state, and scene state
++        # We'll define it as a Dict space for proper gym compatibility
++        obs = self.get_obs()
++        rgb_obs = obs["rgb_obs"]
++        depth_obs = obs["depth_obs"]
++        robot_obs_state = obs["robot_obs"]
++        scene_obs_state = obs["scene_obs"]
++        
++        self.observation_space = gym.spaces.Dict({
++            "rgb_obs": gym.spaces.Dict({
++                name: gym.spaces.Box(low=0, high=255, shape=cam_obs.shape, dtype=np.uint8)
++                for name, cam_obs in rgb_obs.items()
++            }),
++            "depth_obs": gym.spaces.Dict({
++                name: gym.spaces.Box(low=0, high=np.inf, shape=cam_obs.shape, dtype=np.float32)
++                for name, cam_obs in depth_obs.items()
++            }),
++            "robot_obs": gym.spaces.Box(low=-np.inf, high=np.inf, shape=robot_obs_state.shape, dtype=np.float32),
++            "scene_obs": gym.spaces.Box(low=-np.inf, high=np.inf, shape=scene_obs_state.shape, dtype=np.float32),
++        })
+ 
+     def __del__(self):
+         self.close()
+diff --git a/calvin_env/robot/robot.py b/calvin_env/robot/robot.py
+index dba33bc..241d70f 100644
+--- a/calvin_env/robot/robot.py
++++ b/calvin_env/robot/robot.py
+@@ -320,7 +320,8 @@ class Robot:
+ 
+         if not isinstance(self.gripper_action, int) and len(self.gripper_action) == 1:
+             self.gripper_action = self.gripper_action[0]
+-        assert self.gripper_action in (-1, 1)
++        # Allow -1 (close), 0 (no change), or 1 (open)
++        assert self.gripper_action in (-1, 0, 1), f"Gripper action must be -1, 0, or 1, got {self.gripper_action}"
+ 
+         # #
+         # cam_rot = p.getMatrixFromQuaternion(target_ee_orn)
