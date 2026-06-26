@@ -63,7 +63,7 @@ def main():
     if isinstance(obs, dict):
         print("Observation keys:", obs.keys())
 
-    for i in range(50):
+    for i in range(500):
         action = env.action_space.sample() * 1
         action[-1] = 0.0
         obs, reward, done, info = env.step(action)
