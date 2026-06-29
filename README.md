@@ -61,6 +61,110 @@ Use this environment when running OpenVLA-OFT models, fine-tuning scripts, or in
 <br>
 <br>
 
+# How to Run the Scripts
+
+## Script 5: Testing OpenVLA-OFT
+
+```bash
+
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+python scripts/05_test_openvla_oft.py
+```
+
+## Script 6: Visualization OpenVLA-OFT sample 
+
+```bash
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+python scripts/06_visualize_openvla_oft_sample.py
+
+```
+
+<br>
+
+## Script X : running libero evaluatin script: 
+
+Run this small simulator-only test:
+
+```bash
+
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT
+
+python - <<'PY'
+from libero.libero import benchmark
+from experiments.robot.libero.libero_utils import get_libero_env
+
+task_suite = benchmark.get_benchmark("libero_spatial")()
+task = task_suite.get_task(0)
+
+env, task_description = get_libero_env(task, "openvla", resolution=224)
+print("Task:", task_description)
+
+obs = env.reset()
+print("Reset OK")
+print("Obs keys:", obs.keys())
+
+env.close()
+print("LIBERO env test finished successfully.")
+PY
+
+```
+Once it OK, then run: 
+
+```bash
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+python experiments/robot/libero/run_libero_eval.py \
+  --pretrained_checkpoint moojink/openvla-7b-oft-finetuned-libero-spatial \
+  --task_suite_name libero_spatial \
+  --num_trials_per_task 1 \
+  --load_in_4bit True \
+  --use_l1_regression True \
+  --use_diffusion False \
+  --use_film False \
+  --num_images_in_input 2 \
+  --use_proprio True \
+  --center_crop True
+  ```
+
+<br>
+<br>
+
+
+
 # Random Information
 
 ## OpenVLA-OFT test status:
