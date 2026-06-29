@@ -161,7 +161,22 @@ python experiments/robot/libero/run_libero_eval.py \
   ```
 
 <br>
+
+# Script 7: Running the Baseline OpenVLA-OFT
+
+For first reproducible check, use 1 trial per task:
+```bash
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+conda activate openvla-oft
+
+BASELINE_TRIALS=1 bash scripts/07_run_libero_spatial_baseline.sh
+```
+For Stronger baseline increase trial number
+
 <br>
+<br>
+
+
 
 
 

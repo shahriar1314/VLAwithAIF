@@ -19,7 +19,7 @@ __pycache__/
 *.pyc
 
 
-# Datasets, outputs, checkpoints
+# Datasets, checkpoints
 data_cache/
 checkpoints/
 logs/
@@ -40,3 +40,18 @@ calvin_env/
 *.ckpt
 *.safetensors
 *.npz
+
+
+# FOR OUTPUTS
+# Ignore outputs by default
+outputs/*
+
+# Keep selected OpenVLA sample visualization
+!outputs/openvla_oft_sample/
+!outputs/openvla_oft_sample/**
+
+# Keep LIBERO baseline summaries, not videos
+!outputs/libero_baseline/
+!outputs/libero_baseline/**
+outputs/libero_baseline/**/videos/
+outputs/libero_baseline/**/*.mp4
