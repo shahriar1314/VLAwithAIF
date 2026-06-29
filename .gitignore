@@ -2,6 +2,24 @@
 external/calvin/
 external/openvla-oft/
 
+
+external/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.npz
+datasets/
+dataset/
+checkpoints/
+outputs/
+logs/
+__pycache__/
+*.pyc
+
+
 # Datasets, outputs, checkpoints
 data_cache/
 checkpoints/
