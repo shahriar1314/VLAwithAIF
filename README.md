@@ -57,3 +57,14 @@ conda activate openvla-oft
 ```
 
 Use this environment when running OpenVLA-OFT models, fine-tuning scripts, or inference code.
+
+<br>
+<br>
+
+# Random Information
+
+## OpenVLA-OFT test status:
+- Tested with moojink/openvla-7b-oft-finetuned-libero-spatial.
+- Full precision fails on RTX 4060 8 GB due to CUDA OOM.
+- 4-bit loading works after patching openvla_utils.py to avoid .to(device) for quantized models.
+- Generated an 8-step, 7D action chunk from sample LIBERO observation.
