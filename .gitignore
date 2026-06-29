@@ -14,7 +14,6 @@ external/
 datasets/
 dataset/
 checkpoints/
-outputs/
 logs/
 __pycache__/
 *.pyc
@@ -24,7 +23,6 @@ __pycache__/
 data_cache/
 checkpoints/
 logs/
-outputs/
 external/calvin/dataset/
 
 # Python
