@@ -1,0 +1,917 @@
+2026-06-30 11:44:48.029029: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-06-30 11:44:48.029055: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-06-30 11:44:48.029763: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+<frozen importlib._bootstrap>:283: DeprecationWarning: the load_module() method is deprecated and slated for removal in Python 3.12; use exec_module() instead
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 8
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+  ACTION_PROPRIO_NORMALIZATION_TYPE = bounds_q99
+If needed, manually set the correct constants in `prismatic/vla/constants.py`!
+Instantiating pretrained VLA policy...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.13s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:01,  1.99s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.28s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.56s/it]
+Loaded model: <class 'transformers_modules.moojink.openvla-7b-oft-finetuned-libero-spatial.6d0231af0e48c5985f1ff86908f4674b84bc049b.modeling_prismatic.OpenVLAForActionPrediction'>
+06/30 [11:45:17] INFO     | >> Logging to local log file:                                                                      run_libero_eval.py:206
+                          ./experiments/logs/EVAL-libero_spatial-openvla-2026_06_30-11_45_05.txt                                                     
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                 INFO     | >> Task suite: libero_spatial                                                                      run_libero_eval.py:221
+  0%|          | 0/10 [00:00<?, ?it/s]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:45:19] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=1--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:45:31] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 1                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 1 (100.0%)                                                                         run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:11<01:42, 11.37s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=2--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:45:42] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 2                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 2 (100.0%)                                                                         run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:22<01:29, 11.16s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=3--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:45:53] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 3                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 3 (100.0%)                                                                         run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:33<01:17, 11.13s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=4--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:46:04] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 4                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 4 (100.0%)                                                                         run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:44<01:06, 11.08s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=5--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:46:15] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 5                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 5 (100.0%)                                                                         run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [00:55<00:55, 11.13s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=6--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:46:26] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 6                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 6 (100.0%)                                                                         run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:07<00:44, 11.20s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=7--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:46:38] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 7                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 7 (100.0%)                                                                         run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:18<00:33, 11.23s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=8--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:46:50] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 8                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 8 (100.0%)                                                                         run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:30<00:22, 11.49s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:47:01] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 9                                                                  run_libero_eval.py:221
+                 INFO     | >> # successes: 9 (100.0%)                                                                         run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [01:41<00:11, 11.44s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl between the plate and the ramekin and place it on the plate                                   
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=10--success=True--task=pick_up_the_black_bowl_between_the_plate_and_the_r.mp4
+06/30 [11:47:12] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 10                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 10 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [01:53<00:00, 11.40s/it][A100%|██████████| 10/10 [01:53<00:00, 11.30s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 10%|█         | 1/10 [01:55<17:19, 115.51s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:47:15] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=11--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:47:29] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 11                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 11 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:14<02:10, 14.55s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=12--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:47:43] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 12                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 12 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:28<01:53, 14.13s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=13--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:47:58] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 13                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 13 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:42<01:39, 14.26s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=14--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:48:12] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 14                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 14 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:57<01:25, 14.26s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=15--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:48:27] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 15                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 15 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:12<01:12, 14.57s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=16--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:48:41] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 16                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 16 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:26<00:57, 14.37s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=17--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:48:55] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 17                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 17 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:40<00:43, 14.40s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=18--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:49:10] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 18                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 18 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:54<00:28, 14.39s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=19--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:49:24] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 19                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 19 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [02:08<00:14, 14.19s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the ramekin and place it on the plate                                                 
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=20--success=True--task=pick_up_the_black_bowl_next_to_the_ramekin_and_pla.mp4
+06/30 [11:49:37] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 20                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 20 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:22<00:00, 14.02s/it][A100%|██████████| 10/10 [02:22<00:00, 14.24s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 20%|██        | 2/10 [04:20<17:41, 132.72s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:49:40] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=21--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:49:52] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 21                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 21 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:12<01:53, 12.61s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=22--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:50:06] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 22                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 22 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:26<01:45, 13.14s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=23--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:50:19] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 23                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 23 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:38<01:30, 12.98s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=24--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:50:31] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 24                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 24 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:51<01:17, 12.88s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=25--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:50:44] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 25                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 25 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:04<01:04, 12.82s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=26--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:50:57] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 26                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 26 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:17<00:52, 13.02s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=27--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:51:10] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 27                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 27 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:30<00:38, 12.91s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=28--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:51:24] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 28                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 28 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:44<00:26, 13.14s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=29--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:51:37] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 29                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 29 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [01:57<00:13, 13.33s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl from table center and place it on the plate                                                   
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=30--success=True--task=pick_up_the_black_bowl_from_table_center_and_place.mp4
+06/30 [11:51:51] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 30                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 30 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:11<00:00, 13.41s/it][A100%|██████████| 10/10 [02:11<00:00, 13.14s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 30%|███       | 3/10 [06:34<15:32, 133.22s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:51:53] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=31--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:52:05] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 31                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 31 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:12<01:48, 12.05s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=32--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:52:17] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 32                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 32 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:23<01:33, 11.64s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=33--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:52:29] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 33                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 33 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:35<01:23, 11.96s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=34--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:52:41] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 34                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 34 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:47<01:12, 12.05s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=35--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:52:53] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 35                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 35 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [00:59<00:59, 11.99s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=36--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:53:06] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 36                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 36 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:12<00:48, 12.23s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=37--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:53:18] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 37                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 37 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:24<00:36, 12.19s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=38--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:53:30] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 38                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 38 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:36<00:24, 12.13s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=39--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:53:42] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 39                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 39 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [01:48<00:12, 12.12s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the cookie box and place it on the plate                                                   
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=40--success=True--task=pick_up_the_black_bowl_on_the_cookie_box_and_place.mp4
+06/30 [11:53:54] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 40                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 40 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:00<00:00, 12.09s/it][A100%|██████████| 10/10 [02:00<00:00, 12.08s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 40%|████      | 4/10 [08:37<12:55, 129.24s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:53:57] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=41--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:54:12] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 41                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 41 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:15<02:18, 15.44s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=42--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:54:29] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 42                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 42 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:32<02:12, 16.51s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=43--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:54:46] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 43                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 43 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:49<01:55, 16.45s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=44--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:55:02] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 44                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 44 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [01:05<01:38, 16.39s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=45--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:55:18] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 45                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 45 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:21<01:21, 16.34s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=46--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:55:35] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 46                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 46 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:37<01:05, 16.34s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=47--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:55:53] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 47                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 47 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:56<00:51, 17.16s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=48--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:56:10] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 48                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 48 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [02:13<00:33, 16.90s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=49--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:56:25] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 49                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 49 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [02:28<00:16, 16.46s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate                             
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=50--success=True--task=pick_up_the_black_bowl_in_the_top_drawer_of_the_wo.mp4
+06/30 [11:56:42] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 50                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 50 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:45<00:00, 16.44s/it][A100%|██████████| 10/10 [02:45<00:00, 16.51s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 50%|█████     | 5/10 [11:24<11:55, 143.02s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:56:44] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=51--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:56:57] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 51                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 51 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:12<01:56, 12.99s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=52--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:57:10] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 52                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 52 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:25<01:42, 12.84s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=53--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:57:22] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 53                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 53 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:37<01:27, 12.51s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=54--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:57:35] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 54                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 54 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:50<01:15, 12.60s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=55--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:57:47] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 55                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 55 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:02<01:01, 12.35s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=56--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:58:00] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 56                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 56 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:15<00:50, 12.58s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=57--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:58:11] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 57                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 57 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:27<00:36, 12.33s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=58--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:58:24] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 58                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 58 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:40<00:25, 12.50s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=59--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:58:36] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 59                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 59 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [01:52<00:12, 12.32s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the ramekin and place it on the plate                                                      
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=60--success=True--task=pick_up_the_black_bowl_on_the_ramekin_and_place_it.mp4
+06/30 [11:58:49] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 60                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 60 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:04<00:00, 12.44s/it][A100%|██████████| 10/10 [02:04<00:00, 12.48s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 60%|██████    | 6/10 [13:31<09:10, 137.66s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [11:58:51] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=61--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [11:59:06] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 61                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 61 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:14<02:12, 14.70s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=62--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [11:59:20] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 62                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 62 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:29<01:56, 14.53s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=63--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [11:59:34] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 63                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 63 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:42<01:39, 14.19s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=64--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [11:59:48] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 64                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 64 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:56<01:24, 14.05s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=65--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:00:03] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 65                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 65 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:11<01:11, 14.25s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=66--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:00:17] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 66                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 66 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:26<00:57, 14.41s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=67--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:00:32] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 67                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 67 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:40<00:43, 14.49s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=68--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:00:46] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 68                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 68 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:54<00:28, 14.32s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=69--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:01:00] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 69                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 69 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [02:09<00:14, 14.39s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the cookie box and place it on the plate                                              
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=70--success=True--task=pick_up_the_black_bowl_next_to_the_cookie_box_and_.mp4
+06/30 [12:01:14] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 70                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 70 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:23<00:00, 14.28s/it][A100%|██████████| 10/10 [02:23<00:00, 14.33s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 70%|███████   | 7/10 [15:57<07:00, 140.26s/it]06/30 [12:01:15] INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [12:01:17] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=71--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:01:32] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 71                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 71 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:15<02:19, 15.52s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=72--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:01:48] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 72                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 72 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:31<02:04, 15.51s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=73--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:02:04] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 73                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 73 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:46<01:49, 15.62s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=74--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:02:19] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 74                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 74 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [01:02<01:33, 15.64s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=75--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:02:35] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 75                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 75 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:17<01:17, 15.59s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=76--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:02:49] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 76                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 76 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:32<01:01, 15.26s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=77--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:03:04] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 77                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 77 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:47<00:45, 15.14s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=78--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:03:20] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 78                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 78 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [02:02<00:30, 15.21s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=79--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:03:36] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 79                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 79 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [02:19<00:15, 15.57s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the stove and place it on the plate                                                        
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=80--success=True--task=pick_up_the_black_bowl_on_the_stove_and_place_it_o.mp4
+06/30 [12:03:51] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 80                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 80 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:34<00:00, 15.50s/it][A100%|██████████| 10/10 [02:34<00:00, 15.45s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 80%|████████  | 8/10 [18:34<04:51, 145.56s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [12:03:54] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=81--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:04:08] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 81                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 81 (100.0%)                                                                        run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:13<02:03, 13.71s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=82--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:04:20] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 82                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 82 (100.0%)                                                                        run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:26<01:44, 13.10s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=83--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:04:33] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 83                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 83 (100.0%)                                                                        run_libero_eval.py:221
+
+ 30%|███       | 3/10 [00:39<01:30, 12.93s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=84--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:04:46] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 84                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 84 (100.0%)                                                                        run_libero_eval.py:221
+
+ 40%|████      | 4/10 [00:52<01:18, 13.09s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=85--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:04:59] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 85                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 85 (100.0%)                                                                        run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:05<01:04, 12.92s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=86--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:05:11] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 86                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 86 (100.0%)                                                                        run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:17<00:50, 12.75s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=87--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:05:24] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 87                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 87 (100.0%)                                                                        run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [01:30<00:38, 12.72s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=88--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:05:36] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 88                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 88 (100.0%)                                                                        run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [01:41<00:24, 12.42s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=89--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:05:49] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 89                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 89 (100.0%)                                                                        run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [01:55<00:12, 12.75s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl next to the plate and place it on the plate                                                   
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=90--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4
+06/30 [12:06:02] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 90                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 90 (100.0%)                                                                        run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:07<00:00, 12.68s/it][A100%|██████████| 10/10 [02:07<00:00, 12.79s/it]
+                 INFO     | >> Current task success rate: 1.0                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 1.0                                                                 run_libero_eval.py:221
+ 90%|█████████ | 9/10 [20:44<02:20, 140.80s/it]                 INFO     | >> Using default initial states                                                                    run_libero_eval.py:221
+
+  0%|          | 0/10 [00:00<?, ?it/s][A06/30 [12:06:04] INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 1...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=91--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:06:30] INFO     | >> Success: False                                                                                  run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 91                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 90 (98.9%)                                                                         run_libero_eval.py:221
+
+ 10%|█         | 1/10 [00:26<03:56, 26.29s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 2...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=92--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:06:46] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 92                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 91 (98.9%)                                                                         run_libero_eval.py:221
+
+ 20%|██        | 2/10 [00:41<02:39, 19.88s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 3...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=93--success=False--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:07:12] INFO     | >> Success: False                                                                                  run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 93                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 91 (97.8%)                                                                         run_libero_eval.py:221
+
+ 30%|███       | 3/10 [01:07<02:39, 22.78s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 4...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=94--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:07:27] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 94                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 92 (97.9%)                                                                         run_libero_eval.py:221
+
+ 40%|████      | 4/10 [01:23<01:59, 19.88s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 5...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=95--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:07:43] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 95                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 93 (97.9%)                                                                         run_libero_eval.py:221
+
+ 50%|█████     | 5/10 [01:38<01:31, 18.25s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 6...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=96--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:07:59] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 96                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 94 (97.9%)                                                                         run_libero_eval.py:221
+
+ 60%|██████    | 6/10 [01:54<01:10, 17.58s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 7...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=97--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:08:15] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 97                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 95 (97.9%)                                                                         run_libero_eval.py:221
+
+ 70%|███████   | 7/10 [02:10<00:50, 16.93s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 8...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=98--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:08:30] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 98                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 96 (98.0%)                                                                         run_libero_eval.py:221
+
+ 80%|████████  | 8/10 [02:26<00:32, 16.49s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 9...                                                                           run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=99--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:08:47] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 99                                                                 run_libero_eval.py:221
+                 INFO     | >> # successes: 97 (98.0%)                                                                         run_libero_eval.py:221
+
+ 90%|█████████ | 9/10 [02:42<00:16, 16.45s/it][A                 INFO     | >>                                                                                                 run_libero_eval.py:221
+                          Task: pick up the black bowl on the wooden cabinet and place it on the plate                                               
+                 INFO     | >> Starting episode 10...                                                                          run_libero_eval.py:221
+Saved rollout MP4 at path ./rollouts/2026_06_30/2026_06_30-11_45_05--openvla_oft--episode=100--success=True--task=pick_up_the_black_bowl_on_the_wooden_cabinet_and_p.mp4
+06/30 [12:09:03] INFO     | >> Success: True                                                                                   run_libero_eval.py:221
+                 INFO     | >> # episodes completed so far: 100                                                                run_libero_eval.py:221
+                 INFO     | >> # successes: 98 (98.0%)                                                                         run_libero_eval.py:221
+
+100%|██████████| 10/10 [02:58<00:00, 16.42s/it][A100%|██████████| 10/10 [02:58<00:00, 17.88s/it]
+                 INFO     | >> Current task success rate: 0.8                                                                  run_libero_eval.py:221
+                 INFO     | >> Current total success rate: 0.98                                                                run_libero_eval.py:221
+100%|██████████| 10/10 [23:45<00:00, 153.26s/it]100%|██████████| 10/10 [23:45<00:00, 142.59s/it]
+                 INFO     | >> Final results:                                                                                  run_libero_eval.py:221
+                 INFO     | >> Total episodes: 100                                                                             run_libero_eval.py:221
+                 INFO     | >> Total successes: 98                                                                             run_libero_eval.py:221
+                 INFO     | >> Overall success rate: 0.9800 (98.0%)                                                            run_libero_eval.py:221
+Exception ignored in: <function MjRenderContext.__del__ at 0x7962c1f88040>
+Traceback (most recent call last):
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/robosuite/utils/binding_utils.py", line 199, in __del__
+    self.gl_ctx.free()
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x796271300fc0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7962c23eda40>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7962c23eda40>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7962c23edf40>,
+	),
+	result = 0
+)
+Exception ignored in: <function EGLGLContext.__del__ at 0x7962c1f43e20>
+Traceback (most recent call last):
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 155, in __del__
+    self.free()
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/robosuite/renderers/context/egl_context.py", line 149, in free
+    EGL.eglMakeCurrent(EGL_DISPLAY, EGL.EGL_NO_SURFACE, EGL.EGL_NO_SURFACE, EGL.EGL_NO_CONTEXT)
+  File "/home/roolab/miniconda3/envs/openvla-oft/lib/python3.10/site-packages/OpenGL/error.py", line 230, in glCheckError
+    raise self._errorClass(
+OpenGL.raw.EGL._errors.EGLError: EGLError(
+	err = EGL_NOT_INITIALIZED,
+	baseOperation = eglMakeCurrent,
+	cArguments = (
+		<OpenGL._opaque.EGLDisplay_pointer object at 0x796271300fc0>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7962c23eda40>,
+		<OpenGL._opaque.EGLSurface_pointer object at 0x7962c23eda40>,
+		<OpenGL._opaque.EGLContext_pointer object at 0x7962c23edf40>,
+	),
+	result = 0
+)

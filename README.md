@@ -164,6 +164,8 @@ python experiments/robot/libero/run_libero_eval.py \
 
 # Script 7: Running the Baseline OpenVLA-OFT
 
+## Dataset: Spatial
+
 For first reproducible check, use 1 trial per task:
 ```bash
 cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
@@ -173,7 +175,87 @@ BASELINE_TRIALS=1 bash scripts/07_run_libero_spatial_baseline.sh
 ```
 For Stronger baseline increase trial number
 
+
+## Dataset: Object
+
+```bash
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export PROJECT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF
+export LIBERO_ROOT=$PROJECT_ROOT/external/LIBERO
+export OPENVLA_OFT_ROOT=$PROJECT_ROOT/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT:$PYTHONPATH
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export TOKENIZERS_PARALLELISM=false
+export TF_CPP_MIN_LOG_LEVEL=2
+
+RUN_ID="$(date +%Y_%m_%d-%H_%M_%S)"
+mkdir -p $PROJECT_ROOT/outputs/libero_object_baseline
+
+python experiments/robot/libero/run_libero_eval.py \
+  --pretrained_checkpoint moojink/openvla-7b-oft-finetuned-libero-object \
+  --task_suite_name libero_object \
+  --num_trials_per_task 10 \
+  --load_in_4bit True \
+  --use_l1_regression True \
+  --use_diffusion False \
+  --use_film False \
+  --num_images_in_input 2 \
+  --use_proprio True \
+  --center_crop True \
+  2>&1 | tee $PROJECT_ROOT/outputs/libero_object_baseline/${RUN_ID}_terminal.log
+
+```
+
 <br>
+
+# Script 8: To save the baseline values: 
+
+```bash
+python scripts/08_collect_libero_baseline.py
+```
+<br>
+
+# Script 9: Running LIBERO Adapter test
+
+```bash
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT:$PYTHONPATH
+
+python scripts/09_test_libero_adapter.py
+```
+<br>
+
+
+# Script 10: 
+
+```bash
+
+cd /home/roolab/shs/RoboLabProjects/VLAwithAIF
+
+conda activate openvla-oft
+
+unset PYTHONPATH
+export LIBERO_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/LIBERO
+export OPENVLA_OFT_ROOT=/home/roolab/shs/RoboLabProjects/VLAwithAIF/external/openvla-oft
+export PYTHONPATH=$LIBERO_ROOT:$OPENVLA_OFT_ROOT:$PYTHONPATH
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export TOKENIZERS_PARALLELISM=false
+export TF_CPP_MIN_LOG_LEVEL=2
+
+python scripts/10_test_openvla_oft_adapter.py
+```
 <br>
 
 
